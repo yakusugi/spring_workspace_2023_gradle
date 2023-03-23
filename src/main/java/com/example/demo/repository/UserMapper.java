@@ -2,7 +2,6 @@ package com.example.demo.repository;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.dto.UserSearchRequest;
 import com.example.demo.entity.LoginUser;
 /**
@@ -16,6 +15,4 @@ public interface UserMapper {
      * @return ユーザー情報
      */
 	LoginUser search(UserSearchRequest user);
-	
-	LoginUser insert(RegistrationRequest user);
 }

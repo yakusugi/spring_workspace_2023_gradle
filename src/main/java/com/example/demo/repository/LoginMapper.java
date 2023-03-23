@@ -2,7 +2,7 @@ package com.example.demo.repository;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.demo.dto.LoginRequest;
+import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
 /**
  * ユーザー情報 Mapper
@@ -16,5 +16,5 @@ public interface LoginMapper {
      */
 //	LoginUser search(LoginRequest loginUser);
 	
-	LoginUser insert(LoginRequest loginUser);
+	LoginUser insert(RegistrationRequest registrationRequest);
 }

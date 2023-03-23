@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
-import com.example.demo.repository.UserMapper;
+import com.example.demo.repository.LoginMapper;
 /**
  * ユーザー情報 Service
  */
@@ -15,7 +15,7 @@ public class LoginService {
      * ユーザー情報 Mapper
      */
     @Autowired
-    private UserMapper userMapper;
+    private LoginMapper loginMapper;
     /**
      * ユーザー情報検索
 　　　* @param userSearchRequest リクエストデータ
@@ -31,6 +31,6 @@ public class LoginService {
      * @return データ挿入
      */
     public LoginUser insert(RegistrationRequest registrationRequest) {
-        return userMapper.insert(registrationRequest);
+        return loginMapper.insert(registrationRequest);
     }
 }

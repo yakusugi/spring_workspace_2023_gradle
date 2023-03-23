@@ -37,7 +37,7 @@ public class RegistrationController {
    * @param model Model
    * @return ユーザー情報一覧画面
    */
-  @RequestMapping(value = "/registration", method = RequestMethod.POST)
+  @RequestMapping(value = "/registration", method = RequestMethod.GET)
   public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
 	  LoginUser loginUser = loginService.insert(registrationRequest);
     model.addAttribute("userinfo", loginUser);
