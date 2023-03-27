@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
-import com.example.demo.service.LoginService;
+import com.example.demo.service.RegistrationService;
 /**
  * ユーザー情報 Controller
  */
@@ -19,7 +19,7 @@ public class RegistrationController {
    * ユーザー情報 Service
    */
   @Autowired
-  LoginService loginService;
+  RegistrationService registrationService;
   /**
    * ユーザー情報検索画面を表示
    * @param model Model
@@ -39,7 +39,7 @@ public class RegistrationController {
    */
   @RequestMapping(value = "/registration", method = RequestMethod.GET)
   public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
-	  LoginUser loginUser = loginService.insert(registrationRequest);
+	  LoginUser loginUser = registrationService.insert(registrationRequest);
     model.addAttribute("userinfo", loginUser);
     return "/login";
   }
