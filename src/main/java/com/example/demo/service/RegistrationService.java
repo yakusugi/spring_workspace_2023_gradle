@@ -7,18 +7,18 @@ import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
 import com.example.demo.repository.RegistrationMapper;
 /**
- * ユーザー情報 Service
+ * ユーザー情報入力用 Service
  */
 @Service
 public class RegistrationService {
     /**
-     * ユーザー情報 Mapper
+     * ユーザー情報入力用 Mapper
      */
     @Autowired
     private RegistrationMapper registrationMapper;
     
     /**
-     * ユーザー情報挿入
+     * ユーザー情報入力
 　　　* @param userSearchRequest インサートデータ
      * @return データ挿入
      */

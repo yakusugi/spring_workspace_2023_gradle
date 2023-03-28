@@ -3,12 +3,9 @@ package com.example.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.dto.RegistrationRequest;
-import com.example.demo.entity.LoginUser;
 import com.example.demo.service.RegistrationService;
 /**
  * ユーザー情報 Controller
@@ -21,26 +18,26 @@ public class RegistrationController {
   @Autowired
   RegistrationService registrationService;
   /**
-   * ユーザー情報検索画面を表示
+   * ユーザー入力画面表示
    * @param model Model
-   * @return ユーザー情報一覧画面
+   * @return 入力画面
    */
-//  @GetMapping(value = "/registration")
-//  public String insertUserInfo(Model model) {
-//    model.addAttribute("registrationRequest", new RegistrationRequest());
-//    return "/registration";
-//  }
+  @GetMapping(value = "/registration")
+  public String insertUserInfo(Model model) {
+    model.addAttribute("registrationRequest", new RegistrationRequest());
+    return "registration";
+  }
   
   /**
-   * ユーザー情報検索
+   * ユーザー入力画面
    * @param userSearchRequest リクエストデータ
    * @param model Model
    * @return ユーザー情報一覧画面
    */
-  @RequestMapping(value = "/registration", method = RequestMethod.GET)
-  public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
-	  LoginUser loginUser = registrationService.insert(registrationRequest);
-    model.addAttribute("userinfo", loginUser);
-    return "/login";
-  }
+//  @RequestMapping(value = "/login", method = RequestMethod.GET)
+//  public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
+//	  LoginUser loginUser = registrationService.insert(registrationRequest);
+//    model.addAttribute("userinfo", loginUser);
+//    return "/login";
+//  }
 }

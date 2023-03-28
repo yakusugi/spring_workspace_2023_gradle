@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import lombok.Data;
 /**
- * ユーザー情報 検索用リクエストデータ
+ * ユーザー情報 入力用リクエストデータ
  */
 @Data
 public class RegistrationRequest implements Serializable {

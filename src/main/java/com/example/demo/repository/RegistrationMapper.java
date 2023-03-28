@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
 /**
- * ユーザー情報 Mapper
+ * ユーザー情報入力用 Mapper
  */
 @Mapper
 public interface RegistrationMapper {
