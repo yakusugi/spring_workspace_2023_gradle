@@ -30,9 +30,9 @@ public class RegistrationController {
   
   /**
    * ユーザー入力画面
-   * @param userSearchRequest リクエストデータ
+   * @param registrationRequest リクエストデータ
    * @param model Model
-   * @return ユーザー情報一覧画面
+   * @return ユーザー入力画面
    */
 //  @RequestMapping(value = "/login", method = RequestMethod.GET)
 //  public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {

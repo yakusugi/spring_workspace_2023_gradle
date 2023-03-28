@@ -19,7 +19,7 @@ public class RegistrationService {
     
     /**
      * ユーザー情報入力
-　　　* @param userSearchRequest インサートデータ
+　　　* @param registrationRequest インサートデータ
      * @return データ挿入
      */
     public LoginUser insert(RegistrationRequest registrationRequest) {
