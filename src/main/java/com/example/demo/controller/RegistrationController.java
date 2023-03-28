@@ -22,10 +22,10 @@ public class RegistrationController {
    * @param model Model
    * @return 入力画面
    */
-  @GetMapping(value = "/registration")
+  @GetMapping(value = "/user/registration")
   public String insertUserInfo(Model model) {
     model.addAttribute("registrationRequest", new RegistrationRequest());
-    return "registration";
+    return "user/registration";
   }
   
   /**
