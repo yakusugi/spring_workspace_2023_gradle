@@ -14,7 +14,6 @@ public interface RegistrationMapper {
      * @param user 検索用リクエストデータ
      * @return ユーザー情報
      */
-//	LoginUser search(LoginRequest loginUser);
 	
 	LoginUser insert(RegistrationRequest registrationRequest);
 }

@@ -2,10 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.demo.dto.LoginRequest;
 import com.example.demo.service.UserMyBatisService;
 /**
  * ユーザー情報 Controller
@@ -22,11 +19,11 @@ public class LoginController {
    * @param model Model
    * @return ユーザー情報一覧画面
    */
-  @GetMapping(value = "/login")
-  public String displaySearch(Model model) {
-    model.addAttribute("loginRequest", new LoginRequest());
-    return "/login";
-  }
+//  @GetMapping(value = "/login")
+//  public String displaySearch(Model model) {
+//    model.addAttribute("loginRequest", new LoginRequest());
+//    return "/login";
+//  }
   
   /**
    * ユーザー情報検索

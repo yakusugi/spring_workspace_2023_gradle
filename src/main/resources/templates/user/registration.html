@@ -52,8 +52,6 @@
 							bgcolor="#ffffff">
 
 							<form action="#" th:action="@{/login}" th:object="${user}" method="post">
-
-
 								<tr>
 									<td height="25" colspan="2" align="left" valign="middle" bgcolor="#ffffff"
 										class="style2">
@@ -63,24 +61,23 @@
 
 									</td>
 								</tr>
-
 								<tr>
 									<td>Email</td>
 									<td>
-
-										<input type="text" th:field="*{email}" class="form-control" />
+										<input type="text" value="" style="width: 100px;" />
 									</td>
 								</tr>
 								<tr>
 									<td>Username</td>
 									<td>
-
-										<input type="text" th:field="*{username}" class="form-control" />
+										<input type="text" value="" style="width: 100px;" />
 									</td>
 								</tr>
 								<tr>
 									<td>Password</td>
-									<td><input type="password" th:field="*{password}" class="form-control" /></td>
+									<td>
+										<input type="text" value="" style="width: 100px;" />
+									</td>
 								</tr>
 								<tr>
 									<td colspan="2"><button type="submit" class="btn btn-info"

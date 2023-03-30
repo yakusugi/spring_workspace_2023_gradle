@@ -4,8 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.dto.RegistrationRequest;
+import com.example.demo.entity.LoginUser;
 import com.example.demo.service.RegistrationService;
 /**
  * ユーザー情報 Controller
@@ -34,10 +38,10 @@ public class RegistrationController {
    * @param model Model
    * @return ユーザー入力画面
    */
-//  @RequestMapping(value = "/login", method = RequestMethod.GET)
-//  public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
-//	  LoginUser loginUser = registrationService.insert(registrationRequest);
-//    model.addAttribute("userinfo", loginUser);
-//    return "/login";
-//  }
+  @RequestMapping(value = "/login", method = RequestMethod.POST)
+  public String search(@ModelAttribute RegistrationRequest registrationRequest, Model model) {
+	  LoginUser loginUser = registrationService.insert(registrationRequest);
+    model.addAttribute("userinfo", loginUser);
+    return "/login";
+  }
 }
