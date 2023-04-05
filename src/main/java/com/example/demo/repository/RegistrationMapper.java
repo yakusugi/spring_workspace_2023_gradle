@@ -16,4 +16,5 @@ public interface RegistrationMapper {
      */
 	
 	LoginUser insert(RegistrationRequest registrationRequest);
+//	int insert(RegistrationRequest registrationRequest);
 }
