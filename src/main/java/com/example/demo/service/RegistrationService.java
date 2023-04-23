@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.dto.RegistrationRequest;
 import com.example.demo.entity.LoginUser;
 import com.example.demo.repository.RegistrationMapper;
+
 /**
  * ユーザー情報入力用 Service
  */
@@ -23,6 +24,8 @@ public class RegistrationService {
      * @return データ挿入
      */
     public LoginUser insert(RegistrationRequest registrationRequest) {
+    	registrationRequest = new RegistrationRequest();
+    	logger.info("RegistrationRequest object: " + registrationRequest);
         return registrationMapper.insert(registrationRequest);
     }
 }
